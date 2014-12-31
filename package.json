@@ -13,7 +13,7 @@
   "author": "Manuel Vila <mvila@3base.com>",
   "license": "MIT",
   "dependencies": {
-    "kinda-ui": "https://github.com/kinda/kinda-ui/tarball/master",
+    "kinda-ui": "kinda/kinda-ui",
     "lodash": "^2.4.1"
   }
 }
