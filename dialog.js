@@ -2,6 +2,7 @@
 
 var _ = require('lodash');
 var React = require('react');
+var ui = require('kinda-ui').create(); // TODO: remove this ugly dependency
 var DialogCommon = require('kinda-ui/dialog-common');
 
 var Dialog = React.createClass({
@@ -51,7 +52,7 @@ var Dialog = React.createClass({
                     textAlign: 'center'
                   }
                 },
-                this.state.options.message
+                ui.renderString(this.state.options.message)
               ) :
               false
             ),
