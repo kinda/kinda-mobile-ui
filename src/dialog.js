@@ -20,6 +20,7 @@ let Dialog = {
         return (
           React.DOM.div(
             {
+              id: this.state.options.id,
               className: this.state.isOpen ? 'modal active' : 'modal',
               onKeyDown: this.onKeyDown
             },
@@ -70,13 +71,18 @@ let Dialog = {
                 (
                   this.state.options.secondaryButton ?
                   React.DOM.button(
-                    { className: 'btn btn-block', onClick: this.onSecondaryButton },
+                    {
+                      id: 'dialog-secondary-button',
+                      className: 'btn btn-block',
+                      onClick: this.onSecondaryButton
+                    },
                     this.state.options.secondaryButton.label
                   ) :
                   false
                 ),
                 React.DOM.button(
                   {
+                    id: 'dialog-primary-button',
                     className: 'btn btn-primary btn-block',
                     onClick: this.onPrimaryButton
                   },
